@@ -6,7 +6,7 @@ This is a simple Next.js application that demonstrates CRUD functionality with M
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/zenik-kun/MongoDB-CRUD.git
 cd your-repo
 ```
 
