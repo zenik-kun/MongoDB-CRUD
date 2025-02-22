@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js MongoDB CRUD Example
+
+This is a simple Next.js application that demonstrates CRUD functionality with MongoDB.
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 1. Clone the Repository
+```sh
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Set Up MongoDB Atlas
+1. Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and sign in or create an account.
+2. Click on **Create a New Project** and name it.
+3. In the project, go to **Database Deployments** and create a **Shared Cluster** (free-tier is sufficient).
+4. Once created, click on **Connect**, then select **Connect your application**.
+5. Copy the provided MongoDB connection string.
+6. Go to **Network Access** in the left sidebar and click **Add IP Address**.
+7. Set IP to `0.0.0.0/0` (to allow all connections) and save.
+8. Go to **Database Access**, create a user with a strong password, and save the credentials.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Configure Environment Variables
+Create a `.env` file in the root directory and add:
 
-## Learn More
+```sh
+MONGODB_URI=mongodb+srv://your-username:your-password@cluster0.mongodb.net/your-database?retryWrites=true&w=majority
+```
 
-To learn more about Next.js, take a look at the following resources:
+Replace `your-username`, `your-password`, and `your-database` with actual values.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Run the Development Server
+```sh
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+- Create, Read, Update, and Delete (CRUD) operations using MongoDB.
+- API routes in Next.js for backend logic.
+- Fully functional and easy to extend.
